@@ -99,32 +99,9 @@ In the code, $\tau$ is calculated in Myr, and therefore multiplied by 1E6 as $\p
 
 ## Citation
 
-If you want to cite this code, please cite the accompanying papers
+If you use this code, please cite the following paper:
 
 ```
-@article{staelens2024likelihood,
-	author = {{Staelens, Seppe} and {Nelemans, Gijs}},
-	title = {Likelihood of white dwarf binaries to dominate the astrophysical gravitational wave background in the mHz band},
-	DOI= "10.1051/0004-6361/202348429",
-	url= "https://doi.org/10.1051/0004-6361/202348429",
-	journal = {A&A},
-	year = 2024,
-	volume = 683,
-	pages = "A139",
-}
-```
-
-and
-
-```
-@article{hofman2024uncertainty,
-	author = {{Hofman, Sophie} and {Nelemans, Gijs}},
-	title = {Uncertainty of the white dwarf astrophysical gravitational wave background},
-	DOI= "10.1051/0004-6361/202451510",
-	url= "https://doi.org/10.1051/0004-6361/202451510",
-	journal = {A&A},
-	year = 2024,
-	volume = 691,
-	pages = "A261",
+@article{
 }
 ```
