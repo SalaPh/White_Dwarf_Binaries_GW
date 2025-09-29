@@ -1,0 +1,33 @@
+#WDB precision on variables a1.00d-0.17i0.25p0.75-M1M2-30/ 
+# inputs for the disappearance computation
+M1M2# Measurement Type
+1 # selected_SNR, minimum SNR to consider the signal as disappeared
+30 # number of scan points
+# inputs for GW source
+Variable WD masses, hence chirp mass and source_q
+0.0 # source_phi0, phase of the GW signal at fGWmin
+0.0 # source_tc, time of merger, measured from the solar equinox [seconds]
+25.0 # source_dL, luminosity distance [Mpc]
+0.7853981633974483 # source_iota, angle between sky localization and orbital momentum of the binary [rad]
+2.356194490192345 # source_psi, polarization angle [rad]
+3.141592653589793 # source right ascension [rad]
+-0.9320058205649719 # source declination [rad]
+# inputs for detector
+0.001 # detector_fGWmin, smallest frequency considered [Hz]
+10.0 # detector_fGWmax, largest frequency considered [Hz]
+31536000.0 # detector_max_measurement_time, max length of signal considered [seconds]
+8440000.0 # detector_orbit_R_cb, radius of the orbit of the center of the baseline around Earth [m]
+20000000.0 # detector_orbit_R_sat, radius of the orbit of the satellite around Earth [m], for period
+0.0 # detector_orbit_t0, reference time for fixing orbit of satellite around Earth [seconds]
+1.5707963267948966 # detector_orbit_RA0, right ascension of the satellite at t0 [rad]
+-0.40840704496667307 # detector_orbit_DEC0, declination of the satellite at t0 [rad]
+# inputs computation
+3.5 # PN_order_phase
+3.0 # PN_order_amplitude
+True # Fast tau(fGW) evaluation flag
+# inputs on the ranges to explore
+0.4 # minMass, minimum mass considered [Msol]
+1.3679999999999999 # maxMass, maximum mass considered [Msol]
+1000 # cbar_min, minimum time considered for detecting the chosen SNR [s]
+1000000000.0 # cbar_max, maximum time considered for detecting the chosen SNR [s]
+# total computation time: 1021.4081575870514 seconds
