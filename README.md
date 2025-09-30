@@ -5,12 +5,19 @@ This code was initially developed by Dr. Sebastian Baum for the project [2309.07
 
 
 
-
-
-
-
-
 ## Overview of repository:
+
+The repository is divided into the main analysis codes, notebooks, and additional folders containing stored data or supplementary scripts. The notebooks are designed so that they can be used and run to obtain results, without dealing with the other components. 
+
+Main codes:
+- `ParamEstimator_SpaceAI.py`: includes the main structure for simulating the GW signature of a binary in frequency space, and can output the Signal-to-Noise Ratio (SNR) and Fisher matrix of the detected signal, hence compute the parameter reconstruction.
+- `Parameters_Precision.py` and `Signal_Disappearance.py`: make use of the previous script to compute, respectively, the detectable parameter reconstruction and the alert time for signal disappearance of a series of WDB, which can be arranged in a $\mathcal{M}_c$-$d_L$ (chirp mass-luminosity distance) or $M_1$-$M_2$ (the two mass components) grid.
+
+Main notebooks:
+- `example.ipynb`: runs an example run of the code `ParamEstimator_SpaceAI.py` in a structured and easy-to-use way. The input can be simply modified. The results are then saved in the folder `ExampleOutput`. 
+- `Plots.ipynb`: runs both  `Parameters_Precision.py` and `Signal_Disappearance.py` and plots some results. More specifically, an $M_1$-$M_2$ grid and GW parameters can be chosen in the notebook and run for both codes, which store the results in the folder `Precision_Output`. Afterwards, the parameter reconstruction precision for mass ratio $q$, chirp mass $\mathcal{M}_c$, luminosity distance $d_L$ and sky localisation $\Omega$ is plotted. In addition, the alert time of a WDB disappearance is plotted.
+- `Orbit_after_RLOF.ipynb`: 
+
 
 - `data`: contains the results of the population synthesis, the star formation histories and the z_at_age.txt file.
 - `doc`: contains documentation in html and pdf format.
