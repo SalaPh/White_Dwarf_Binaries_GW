@@ -8,7 +8,6 @@ This code was initially developed as [AIMforGW](https://github.com/sbaum90/AIMfo
 ## Overview of repository:
 
 The repository is divided into the main analysis codes, notebooks, and additional folders containing stored data or supplementary scripts. The notebooks are designed so that they can be used and run to obtain results, without dealing with the other components. 
-In order to run the code, 
 
 ### Main codes:
 - `ParamEstimator_SpaceAI.py`: includes the main structure for simulating the GW signature of an evolving binary in frequency space (considering GW evolution only), and can output the Signal-to-Noise Ratio (SNR) and Fisher matrix of the detected signal, hence compute the parameter reconstruction.
@@ -28,64 +27,16 @@ In order to run the code,
 - `Precision_Output`: represents the storage folder for `Parameters_Precision.py` and `Signal_Disappearance.py`, or for `Plots.ipynb` if these codes are run through the notebook. Currently, it contains the result of a specific run, for both parameter reconstruction and signal disappearance.
 - `MT_Orbit_after_RLOF`: represents the storage folder for `Orbit_after_RLOF.ipynb`. Currently, it contains the result of a specific run.
 
-## Installation
-
-The code can be installed simply by cloning the repository. The repository contains a `WD_GWB.yml` file that can be used to create a `conda` environment that contains all the required packages to run the code in `src` and `post_proc`. This is done by running
-
-```
-$ conda env create -f WD_GWB.yml
-```
 
 ## Running the code
 
-The code can be run from the main directory or `src`.
-One should start by activating the `WD_GWB` environment as follows:
+The code can be installed simply by cloning the repository. 
+The additional installation of the package `pycbc`
+is required for running the code.
 
-```
-$ conda activate WD_GWB
-```
+For a first approach, one could run the notebook `example.py` to understand the basic functioning of the main code `ParamEstimator_SpaceAI.py`
+Otherwise, the two other notebooks can be easily run as they are to show the results that have already been computed and stored. In addition, one could start modifying the input parameters for new results.
 
-Afterwards, all three scripts can simply be run by doing
-
-```
-$ python Create_z_at_age.py
-$ python SeBa_pre_process.py
-$ python GWB.py param.ini
-```
-
-For `Create_z_at_age.py` one only needs to specify a maximum redshift and the number of interpolation points desired.
-
-For `SeBa_pre_process.py`, one only needs to specify the data paths and whether to save the file. Additional datafolders can be made here, and they should be adapted in the main code.
-
-For `GWB.py`, the settings are specified in a parameter file, where `param.ini` is shown as an example in the repository. As an example, the code takes 7-8 minutes to create the examples `SFH1_50_20_*_example.txt`.
-
-## Clarification on some of the formulas
-
-References to equations are as given in [MT1](/references/master_thesis_Seppe_Staelens.pdf), unless otherwise mentioned. The clarifications here are to correct numerical factors in [MT1](/references/master_thesis_Seppe_Staelens.pdf), that have been adapted for [Staelens, Nelemans 2024](https://www.aanda.org/articles/aa/full_html/2024/03/aa48429-23/aa48429-23.html).
-
-### Expressions for Omega
-
-For the bulk, $\Omega$ is calculated as in (2.45), with a different prefactor 8.10E-9 / $S$ where $S$ is a normalization factor introduced through the SeBA code: SeBa takes as input a certain amount of mass $S$ available for star formation. This factor $S$ is 1.5E6 in [MT1](/references/master_thesis_Seppe_Staelens.pdf), 4E6 in [Staelens, Nelemans 2024](https://www.aanda.org/articles/aa/full_html/2024/03/aa48429-23/aa48429-23.html) and 3.4E6 for [2407.10642](https://arxiv.org/abs/2407.10642).
-
-Similarly, the constant prefactor in (2.48) is changed to 1.28E-8 / $S$, instead of 8.5E-15, for the birth and merger contributions.
-
-### Expressions for z contribution
-
-In the bulk part of the code, the $z$ contributions are saved as $\Omega$ / (some factor), in order not to work with small numbers. This is the reason the $z$ contributions in the merger and birth part are saved as $\Omega$ / (this normalization) as well, to keep the relative contributions the same (as that is all we are interested in). This is admittedly still a bit messy in the code, and should be reworked.
-
-### Expressions for number of binaries
-
-This part is not in [MT1](/references/master_thesis_Seppe_Staelens.pdf). I determined the number of binaries in each $z$-$f$ bin as follows:
-
-$$ N(z, f) = (4 \pi \cdot \chi(z)^2 \cdot \Delta \chi(z)) \cdot n (z, f) , $$
-
-where $n(z, f)$ is the number density of systems in the bin. The latter is given by
-
-$$ n(z, f) = \sum\*k \frac{\psi(z; k)}{S} \cdot \tau(z, f; k) .$$
-
-In this expression, $\psi$ is again the SFH, determined at the birth time of the system and normalized by $S$ as explained above; and $\tau$ is the time it takes the system to traverse the bin. The reasoning is that all systems produced in the past, during a time corresponding to $\tau$, will have moved to the bin under consideration.
-
-In the code, $\tau$ is calculated in Myr, and therefore multiplied by 1E6 as $\psi$ has units of 1/yr.
 
 ## Citation
 
