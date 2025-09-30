@@ -20,7 +20,7 @@ In order to run the code,
 - `Orbit_after_RLOF.ipynb`: in contrast with `ParamEstimator_SpaceAI.py`, this notebook computes an alternative WDB orbit evolution with the inclusion of mass transfer. Only the orbit is computed, not the GW signal. In addition, some important properties, such as the merger time and the phase shift due to mass transfer, are computed and plotted, again for an $M_1$ - $M_2$ grid of WDB. The results are stored in the folder `MT_Orbit_after_RLOF`.
 
 ### Folders:
-- `Analysis_Scripts`: contains additional codes and information needed for the computation. Ìnstrument_Sensitivity` includes the sensitivity data of MAGIS Space. `constants.py` includes some constants used overall. `plot_format.py` includes some formatting functions to obtain nice plots.
+- `Analysis_Scripts`: contains additional codes and information needed for the computation. `Instrument_Sensitivity` includes the sensitivity data of MAGIS Space. `constants.py` includes some constants used overall. `plot_format.py` includes some formatting functions to obtain nice plots.
 `antenna_Funs_satellites.py` computes the orbit and direction of the satellite around Earth and Sun.
 `waveform_LO.py` and `waveform_PN.py` include some functions of the orbit evolution of a binary, respectively at leading and higher PN orders.
 `helper_funs.py` has some functions useful for the main wrappers. Lastly, `WD.py` includes some functions regarding properties and evolution specific to white dwarfs (WDs) and WDBs.
