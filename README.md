@@ -10,7 +10,8 @@ This code was initially developed as [AIMforGW](https://github.com/sbaum90/AIMfo
 The repository is divided into the main analysis codes, notebooks, and additional folders containing stored data or supplementary scripts. The notebooks are designed so that they can be used and run to obtain results, without dealing with the other components. 
 
 ### Main codes:
-- `ParamEstimator_SpaceAI.py`: includes the main structure for simulating the GW signature of an evolving binary in frequency space (considering GW evolution only), and can output the Signal-to-Noise Ratio (SNR) and Fisher matrix of the detected signal, hence compute the parameter reconstruction.
+- `ParamEstimator_SpaceAI.py`: includes the main structure for simulating the GW signature of an evolving binary in frequency space (considering GW evolution only), and can output the Signal-to-Noise Ratio (SNR) and Fisher matrix of the detected signal by a space-based interferometer. It is set to compute this for MAGIS Space.
+- `ParamEstimator_GroundAI.py`: It is the equivalent of the previous script but for ground-based interferometers (with vertical configuration).
 - `Parameters_Precision.py` and `Signal_Disappearance.py`: make use of the previous script to compute, respectively, the detectable parameter reconstruction and the alert time for signal disappearance of a series of WDB, which can be arranged in a $\mathcal{M}_c$ - $d_L$ (chirp mass - luminosity distance) or $M_1$ - $M_2$ (the two mass components) grid.
 
 ### Main notebooks:
@@ -21,6 +22,7 @@ The repository is divided into the main analysis codes, notebooks, and additiona
 ### Folders:
 - `Analysis_Scripts`: contains additional codes and information needed for the computation. `Instrument_Sensitivity` includes the sensitivity data of MAGIS Space. `constants.py` includes some constants used overall. `plot_format.py` includes some formatting functions to obtain nice plots.
 `antenna_Funs_satellites.py` computes the orbit and direction of the satellite around Earth and Sun.
+`antenna_Funs_ground.py` computes the orbit and direction of a ground-based detector with Earth movement.
 `waveform_LO.py` and `waveform_PN.py` include some functions of the orbit evolution of a binary, respectively at leading and higher PN orders.
 `helper_funs.py` has some functions useful for the main wrappers. Lastly, `WD.py` includes some functions regarding properties and evolution specific to white dwarfs (WDs) and WDBs.
 - `ExampleOutput`: represents the storage folder for `example.ipynb`. Currently, it contains the result of a specific run.
