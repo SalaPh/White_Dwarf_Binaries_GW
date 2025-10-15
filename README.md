@@ -10,8 +10,7 @@ This code was initially developed as [AIMforGW](https://github.com/sbaum90/AIMfo
 The repository is divided into the main analysis codes, notebooks, and additional folders containing stored data or supplementary scripts. The notebooks are designed so that they can be used and run to obtain results, without dealing with the other components. 
 
 ### Main codes:
-- `ParamEstimator_SpaceAI.py`: includes the main structure for simulating the GW signature of an evolving binary in frequency space (considering GW evolution only), and can output the Signal-to-Noise Ratio (SNR) and Fisher matrix of the detected signal by a space-based interferometer. It is set to compute this for MAGIS Space.
-- `ParamEstimator_GroundAI.py`: It is the equivalent of the previous script but for ground-based interferometers (with vertical configuration).
+- `ParamEstimator_SpaceAI.py` and `ParamEstimator_GroundAI.py`: include the main structure for simulating the GW signature of an evolving binary in frequency space (considering GW evolution only), and can output the Signal-to-Noise Ratio (SNR) and Fisher matrix of the detected signal by a space-based and ground-based interferometer, respectively. It is set to compute this for MAGIS detectors.
 - `Parameters_Precision.py` and `Signal_Disappearance.py`: make use of the previous script to compute, respectively, the detectable parameter reconstruction and the alert time for signal disappearance of a series of WDB, which can be arranged in a $\mathcal{M}_c$ - $d_L$ (chirp mass - luminosity distance) or $M_1$ - $M_2$ (the two mass components) grid.
 
 ### Main notebooks:
