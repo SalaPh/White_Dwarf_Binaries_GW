@@ -44,6 +44,14 @@ Otherwise, the two other notebooks can be easily run as they are to show the res
 If you use this code, please cite the following paper:
 
 ```
-@article{
+@article{Sala:2025uqh,
+    author = "Sala, Giona and Brandenstein, Chiara and Baum, Sebastian and Graham, Peter W.",
+    title = "{Detecting White Dwarf Binary Mergers with Gravitational Waves}",
+    eprint = "2510.19913",
+    archivePrefix = "arXiv",
+    primaryClass = "gr-qc",
+    reportNumber = "TTK-25-30",
+    month = "10",
+    year = "2025"
 }
 ```
