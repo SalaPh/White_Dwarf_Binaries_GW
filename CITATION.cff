@@ -1,0 +1,9 @@
+cff-version: 1.0.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Sala
+    given-names: Giona
+    orcid: https://orcid.org/0009-0001-3716-862X
+title: "White Dwarf Binaries GW"
+date-released: 2025-10-22
+url: "https://github.com/SalaPh/White_Dwarf_Binaries_GW"
