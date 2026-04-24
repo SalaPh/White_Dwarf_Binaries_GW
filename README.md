@@ -1,7 +1,7 @@
 # White_Dwarf_Binaries_GW
 Analysis of the gravitational waves (GW) signal from white dwarf binaries (WDBs) detectable with MAGIS Space atom-interferometer. The study focuses on the signal upon merger and can be used to study the future parameter reconstruction of WDB with MAGIS Space.
 
-This code was initially developed as [AIMforGW](https://github.com/sbaum90/AIMforGW.git) by Dr. Sebastian Baum for the project [2309.07952](https://arxiv.org/abs/2309.07952) and then customised for the merging WDB. The reference to this work is [2510.xxxxx](https://arxiv.org/abs/2510.xxxxx).
+This code was initially developed as [AIMforGW](https://github.com/sbaum90/AIMforGW.git) by Dr. Sebastian Baum for the project [2309.07952](https://arxiv.org/abs/2309.07952) and then customised for the merging WDB. The reference to this work is [2510.19913](https://arxiv.org/abs/2510.19913).
 
 
 
