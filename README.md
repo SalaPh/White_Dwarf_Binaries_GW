@@ -1,7 +1,7 @@
 # White_Dwarf_Binaries_GW
 Analysis of the gravitational waves (GW) signal from white dwarf binaries (WDBs) detectable with MAGIS Space atom-interferometer. The study focuses on the signal upon merger and can be used to study the future parameter reconstruction of WDB with MAGIS Space.
 
-This code was initially developed as [AIMforGW](https://github.com/sbaum90/AIMforGW.git) by Dr. Sebastian Baum for the project [2309.07952](https://arxiv.org/abs/2309.07952) and then customised for the merging WDB. The reference to this work is [2510.19913](https://arxiv.org/abs/2510.19913).
+This code was initially developed as [AIMforGW](https://github.com/sbaum90/AIMforGW.git) by Dr. Sebastian Baum for the project [JCAP 05 (2024) 027](https://doi.org/10.1088/1475-7516/2024/05/027) and then customised for the merging WDB. The reference to this work is [Phys. Rev. D 113 (2026) 123022](https://link.aps.org/doi/10.1103/dbbd-7v7s).
 
 
 
@@ -44,14 +44,18 @@ Otherwise, the two other notebooks can be easily run as they are to show the res
 If you use this code, please cite the following paper:
 
 ```
-@article{Sala:2025uqh,
-    author = "Sala, Giona and Brandenstein, Chiara and Baum, Sebastian and Graham, Peter W.",
-    title = "{Detecting White Dwarf Binary Mergers with Gravitational Waves}",
-    eprint = "2510.19913",
-    archivePrefix = "arXiv",
-    primaryClass = "gr-qc",
-    reportNumber = "TTK-25-30",
-    month = "10",
-    year = "2025"
+@article{Sala:2026,
+  title = {Detecting white dwarf binary mergers with gravitational waves},
+  author = {Sala, Giona and Brandenstein, Chiara and Baum, Sebastian and Graham, Peter W.},
+  journal = {Phys. Rev. D},
+  volume = {113},
+  issue = {12},
+  pages = {123022},
+  numpages = {30},
+  year = {2026},
+  month = {Jun},
+  publisher = {American Physical Society},
+  doi = {10.1103/dbbd-7v7s},
+  url = {https://link.aps.org/doi/10.1103/dbbd-7v7s}
 }
 ```
